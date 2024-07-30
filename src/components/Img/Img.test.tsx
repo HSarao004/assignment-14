@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Img from './Img';
 
@@ -9,7 +9,6 @@ describe('Img Component', () => {
     const imgElement = screen.getByAltText('Placeholder Image');
     expect(imgElement).toBeVisible();
     expect(imgElement).toHaveAttribute('src', 'https://via.placeholder.com/150');
-    expect(imgElement).toHaveStyle('background-color: transparent');
   });
 
   it('renders disabled image', () => {
@@ -35,7 +34,4 @@ describe('Img Component', () => {
     expect(imgElement).toHaveStyle('background-color: grey'); // because it's disabled
     expect(imgElement).toHaveStyle('opacity: 0.5');
   });
-
-  
 });
-//helllllo

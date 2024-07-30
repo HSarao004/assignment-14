@@ -20,7 +20,12 @@ describe('Text Component', () => {
     render(<Text disabled>Disabled Text</Text>);
     const disabledTextElement = screen.getByText('Disabled Text');
     expect(disabledTextElement).toBeInTheDocument();
-    expect(disabledTextElement).toHaveStyle('color: grey; background-color: grey; opacity: 0.5; cursor: not-allowed');
+    expect(disabledTextElement).toHaveStyle({
+      color: 'grey',
+      backgroundColor: 'grey',
+      opacity: '0.5',
+      cursor: 'not-allowed',
+    });
   });
 
   it('renders hidden text', () => {

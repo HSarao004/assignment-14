@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import { ImgProps } from './Img.types';
 
 const StyledImg = styled.img<{
-  disabled: boolean;
-  visible: boolean;
-  disabledColor: string;
-  backgroundColor: string;
+  $isVisible: boolean;
+  $isDisabled: boolean;
+  $disabledColor: string;
+  $backgroundColor: string;
 }>`
   width: 100%;
   height: auto;
-  display: ${({ visible }) => (visible ? 'block' : 'none')};
-  background-color: ${({ disabled, disabledColor, backgroundColor }) => (disabled ? disabledColor : backgroundColor)};
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  display: ${({ $isVisible }) => ($isVisible ? 'block' : 'none')};
+  background-color: ${({ $isDisabled, $disabledColor, $backgroundColor }) =>
+    $isDisabled ? $disabledColor : $backgroundColor};
+  opacity: ${({ $isDisabled }) => ($isDisabled ? 0.5 : 1)};
+  cursor: ${({ $isDisabled }) => ($isDisabled ? 'not-allowed' : 'pointer')};
 
   @media (max-width: 1200px) {
     width: 80%;
@@ -45,10 +46,10 @@ const Img: React.FC<ImgProps> = ({
     <StyledImg
       src={src}
       alt={alt}
-      disabled={disabled}
-      visible={visible}
-      disabledColor={disabledColor}
-      backgroundColor={backgroundColor}
+      $isDisabled={disabled}
+      $isVisible={visible}
+      $disabledColor={disabledColor}
+      $backgroundColor={backgroundColor}
       {...props}
     />
   );

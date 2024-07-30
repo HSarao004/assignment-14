@@ -4,4 +4,5 @@ export interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
     visible?: boolean;
     backgroundColor?: string;
     disabledBackgroundColor?: string;
-}
+  }
+  

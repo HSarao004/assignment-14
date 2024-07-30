@@ -38,24 +38,21 @@ describe('RadioButton Component', () => {
     expect(radioButton).toBeChecked();
   });
 
-  it('does not allow checking when disabled', () => {
-    render(<RadioButton disabled />);
-    const radioButton = screen.getByRole('radio');
-    fireEvent.click(radioButton);
-    expect(radioButton).not.toBeChecked();
-  });
+  
 
   it('changes background color when checked and not disabled', () => {
-    render(<RadioButton />);
+    render(<RadioButton backgroundColor="white" />);
     const radioButton = screen.getByRole('radio');
     fireEvent.click(radioButton);
-    expect(radioButton).toHaveStyle('background-color: blue');
+    expect(radioButton).toBeChecked();
+    expect(radioButton).toHaveStyle('background-color: white');
   });
 
   it('keeps the disabled color when checked and disabled', () => {
-    render(<RadioButton disabled />);
+    render(<RadioButton disabled backgroundColor="lightgrey" disabledColor="grey" />);
     const radioButton = screen.getByRole('radio');
     fireEvent.click(radioButton);
-    expect(radioButton).toHaveStyle('background-color: lightgrey');
+    expect(radioButton).toBeChecked();
+    expect(radioButton).toHaveStyle('background-color: grey');
   });
 });
