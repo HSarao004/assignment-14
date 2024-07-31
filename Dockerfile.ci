@@ -1,22 +1,7 @@
 FROM node:21-bullseye
-
-WORKDIR /singh_harsimran_ui_garden/
-
-# Copy package.json and package-lock.json
+WORKDIR /singh_gurusewak_ui_garden/
 COPY package*.json .
-
-# Install dependencies
 RUN npm ci
-
-# Install Playwright with Chromium
 RUN npx playwright install --with-deps chromium
-
-# Set up Git configuration
-RUN git config --global user.email "149915512+HSarao004@users.noreply.github.com"
-RUN git config --global user.name "Hsarao2"
-
-# Copy the rest of the project files
 COPY . .
-
-# Run the tests
-CMD ["npm", "run", "ci:test"]
+CMD ["npm","run","ci:test"]
