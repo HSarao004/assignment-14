@@ -11,9 +11,9 @@ RUN npm ci
 # Install Playwright with Chromium
 RUN npx playwright install --with-deps chromium
 
-# Configure git (replace with your actual email and name)
-RUN git config --global user.email "hsarao2@rrc.ca"
-RUN git config --global user.name "Sarao"
+# Set up Git configuration
+RUN git config --global user.email "149915512+HSarao004@users.noreply.github.com"
+RUN git config --global user.name "Hsarao2"
 
 # Copy the rest of the project files
 COPY . .

@@ -13,12 +13,12 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.email "hsarao2@rrc.ca"
-          git config --global user.name "Sam"
+          git config --global user.email "149915512+HSarao004@users.noreply.github.com"
+          git config --global user.name "Hsarao2"
 
       - name: Build Docker image
         run: docker build -t main -f $COMPOSE_FILE .
 
       - name: Run tests
         run: docker run main
-        timeout-minutes: 30  # Set a timeout for this step
+        
