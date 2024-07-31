@@ -13,7 +13,7 @@ RUN npx playwright install --with-deps chromium
 
 # Configure git (replace with your actual email and name)
 RUN git config --global user.email "hsarao2@rrc.ca"
-RUN git config --global user.name "Sam"
+RUN git config --global user.name "Sarao"
 
 # Copy the rest of the project files
 COPY . .

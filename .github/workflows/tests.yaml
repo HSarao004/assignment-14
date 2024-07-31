@@ -1,7 +1,5 @@
 name: Run Tests
-
 on: push
-
 jobs:
   test:
     name: Run Test suite
@@ -9,12 +7,18 @@ jobs:
     env:
       COMPOSE_FILE: Dockerfile.ci
 
-    steps: 
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.email "hsarao2@rrc.ca"
+          git config --global user.name "Sam"
 
       - name: Build Docker image
         run: docker build -t main -f $COMPOSE_FILE .
 
       - name: Run tests
         run: docker run main
+        timeout-minutes: 30  # Set a timeout for this step
