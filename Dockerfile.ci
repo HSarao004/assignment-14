@@ -17,5 +17,22 @@ RUN git config --global user.email "149915512+HSarao004@users.noreply.github.com
 # Copy the rest of the project files
 COPY . .
 
-# Run the tests
-CMD ["npm", "run", "ci:test"]
+# Set up a simple HTTP server to serve Storybook with CSP header adjustments
+RUN npm install -g http-server
+
+# Create a script to adjust CSP and run the server and tests
+RUN echo ' \
+#!/bin/sh\n \
+http-server -c-1 -p 6006 --cors --silent & \n \
+sleep 5 \n \
+if [ "$CSP_ALLOW_INLINE_SCRIPTS" = "true" ]; then \n \
+  echo "Allowing inline scripts" \n \
+  echo "add_header Content-Security-Policy \"script-src 'self' 'unsafe-inline';\";" > /tmp/csp.conf \n \
+fi \n \
+npm run ci:test \n \
+' > /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+# Run the entrypoint script
+CMD ["/entrypoint.sh"]

@@ -15,4 +15,4 @@ jobs:
         run: docker build -t main -f $COMPOSE_FILE .
 
       - name: Run tests
-        run: docker run main
+        run: docker run -e "CSP_ALLOW_INLINE_SCRIPTS=true" main
