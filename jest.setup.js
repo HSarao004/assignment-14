@@ -17,5 +17,5 @@ module.exports = {
         "includeFailureMsg": true
       }
     ]
-  ],
+  ]
 };
