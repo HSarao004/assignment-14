@@ -1,5 +1,5 @@
 FROM node:21-bullseye
-WORKDIR /singh_gurusewak_ui_garden/
+WORKDIR /singh_harsimran_ui_garden/
 COPY package*.json .
 RUN npm ci
 RUN npx playwright install --with-deps chromium
