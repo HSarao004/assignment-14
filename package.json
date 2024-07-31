@@ -41,7 +41,9 @@
         }
       ]
     ],
-    "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ]
   },
   "dependencies": {
     "@storybook/jest": "^0.2.2",
@@ -84,6 +86,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
     "storybook": "8.1.4",
     "ts-node": "10.9.2",
     "typescript": "5.2.2",
