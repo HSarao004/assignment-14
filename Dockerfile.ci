@@ -2,18 +2,21 @@ FROM node:21-bullseye
 
 WORKDIR /singh_harsimran_ui_garden/
 
-# Copy the necessary files and directories
-COPY public/ /singh_harsimran_ui_garden/public
-COPY src/ /singh_harsimran_ui_garden/src
-COPY package.json /singh_harsimran_ui_garden/
-COPY package-lock.json /singh_harsimran_ui_garden/
-COPY . /singh_harsimran_ui_garden
+# Copy package.json and package-lock.json
+COPY package*.json .
 
 # Install dependencies
-RUN npm install
+RUN npm ci
 
 # Install Playwright with Chromium
 RUN npx playwright install --with-deps chromium
 
-# Set the default command to run the Storybook and tests
+# Configure git (replace with your actual email and name)
+RUN git config --global user.email "hsarao2@rrc.ca"
+RUN git config --global user.name "Sam"
+
+# Copy the rest of the project files
+COPY . .
+
+# Run the tests
 CMD ["npm", "run", "ci:test"]
