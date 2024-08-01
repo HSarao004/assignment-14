@@ -7,6 +7,7 @@ const HomePage = () => {
   return (
     <div style={{ width: '100%' }}>
       <section className="hero">
+      <Text content="Harsimran Singh Sarao " />
         <Img src="path/to/your/photo.jpg" alt="Your Photo" />
         <h1>Your Name</h1>
         <Text content="Your info and a brief introduction." />
