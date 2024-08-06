@@ -16,7 +16,7 @@ const ContactPage = () => {
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div>
-              <label htmlFor="query">Your Query:</label>
+              <label htmlFor="query">Your Questions:</label>
               <textarea id="query" name="query" required></textarea>
             </div>
             <button type="submit">Submit</button>
