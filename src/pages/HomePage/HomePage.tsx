@@ -9,7 +9,7 @@ const HomePage = () => {
       <section className="hero">
       <Text content="Harsimran Singh Sarao " />
         <Img src="path/to/your/photo.jpg" alt="Your Photo" />
-        <h1>Your Name</h1>
+        
         <Text content="Full Stack Web Developer " />
         <Text content="Let's talk about your project!" />
         {/* <MyButton text="Contact Me" onClick={() => window.location.href = "/contact"} /> */}

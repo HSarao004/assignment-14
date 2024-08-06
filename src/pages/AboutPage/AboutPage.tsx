@@ -5,7 +5,7 @@ const AboutPage = () => {
     <div className="AboutPage">
       <main>
         <section className="about">
-          <h1>About Me</h1>
+          <h1>I am a Full Stack Web</h1>
           <div>
             <h2>Skills</h2>
             <p>List your skills here.</p>
