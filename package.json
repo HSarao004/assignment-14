@@ -12,7 +12,7 @@
     "build:storybook": "cross-env BUILD_TYPE=storybook storybook build",
     "build": "concurrently -gs all -c 'bold.cyan,bold.magenta,bold.yellow,bold.green,bold.blue' npm:build:main npm:build:storybook",
     "test:ts": "tsc",
-    "test:jest": "jest --config jest.config.cjs",
+    "test:jest": "jest --config ./jest.config.cjs",
     "test:storybook": "test-storybook",
     "test": "concurrently -gs all -c 'bold.cyan,bold.magenta,bold.yellow,bold.green,bold.blue' \"npm:test:*(!ts)\"",
     "ci:test": "npm run storybook & sleep 30 && npm run test",
