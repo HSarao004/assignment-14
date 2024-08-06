@@ -12,7 +12,7 @@ const AboutPage = () => {
           </div>
           <div>
             <h2>Education</h2>
-            <p>Full Stack Web Development Diploma holder From Red River College</p>
+            <p>Full Stack Web Development Diploma  From Red River College</p>
           </div>
         </section>
       </main>
