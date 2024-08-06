@@ -12,7 +12,7 @@ const HomePage = () => {
         <h1>Your Name</h1>
         <Text content="Full Stack Web Developer " />
         <Text content="Let's talk about your project!" />
-        <MyButton text="Contact Me" onClick={() => window.location.href = "/contact"} />
+        {/* <MyButton text="Contact Me" onClick={() => window.location.href = "/contact"} /> */}
       </section>
     </div>
   );

@@ -6,7 +6,7 @@ import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import './styles.css';  // Import external CSS
+import './styles.css';
 
 function App() {
   return (
