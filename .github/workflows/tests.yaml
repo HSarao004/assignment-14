@@ -9,9 +9,8 @@ permissions:
   id-token: write
 
 jobs:
-
   test:
-    name: Run test suite
+    name: Run Test suite
     runs-on: ubuntu-latest
     env:
       COMPOSE_FILE: Dockerfile.ci
