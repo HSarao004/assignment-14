@@ -8,11 +8,11 @@ const AboutPage = () => {
           <h1>I am a Full Stack Web</h1>
           <div>
             <h2>Skills</h2>
-            <p>List your skills here.</p>
+            <p>I use alot of front end and backend programming languages </p>
           </div>
           <div>
             <h2>Education</h2>
-            <p>List your education here.</p>
+            <p>Full Stack Web Development Diploma holder From Red River College</p>
           </div>
         </section>
       </main>
