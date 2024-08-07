@@ -1,203 +1,200 @@
-/* Add your CSS styles here */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  nav {
-    width: 100%;
-    background-color: #282c34;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #61dafb;
-    font-weight: bold;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .hero {
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    margin-top: 60px; /* To offset the fixed navbar height */
-  }
-  
-  .hero img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  background-color: #282c34;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.hero {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 60px; /* To offset the fixed navbar height */
+}
+
+.hero img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0 0;
+}
+
+.contact-form {
+  text-align: left;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h1 {
+  text-align: center;
+}
+
+.contact-form form div {
+  margin-bottom: 10px;
+}
+
+.contact-form form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.social-media {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-media h2 {
+  margin-bottom: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social-media ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.projects, .about {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects h1, .about h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects div, .about div {
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
+    font-size: 2em;
   }
-  
-  .hero p {
-    font-size: 1.2em;
+
+  .hero img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact-form, .projects, .about {
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
     margin: 10px 0;
   }
-  
-  footer {
-    background-color: #282c34;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+
   footer ul li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  footer ul li a {
-    text-decoration: none;
-    color: #61dafb;
-    font-weight: bold;
-  }
-  
-  footer p {
-    margin: 10px 0 0;
-  }
-  
-  .contact-form {
-    text-align: left;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact-form h1 {
-    text-align: center;
-  }
-  
-  .contact-form form div {
-    margin-bottom: 10px;
-  }
-  
-  .contact-form form label {
     display: block;
-    margin-bottom: 5px;
+    margin: 10px 0;
   }
-  
-  .contact-form form input,
-  .contact-form form textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  .social-media {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .social-media h2 {
-    margin-bottom: 10px;
-  }
-  
-  .social-media ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .social-media ul li {
-    display: inline-block;
-    margin: 0 15px;
-  }
-  
-  .social-media ul li a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .projects, .about {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .projects h1, .about h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .projects div, .about div {
-    margin-bottom: 20px;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2em;
-    }
-  
-    .hero img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .contact-form, .projects, .about {
-      padding: 10px;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    footer ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  }
-  
+}

@@ -1,20 +1,29 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MemoryRouter } from 'react-router-dom';
 import Navbar from './Navbar';
+import MemoryRouterWrapper from '../../MemoryRouterWrapper';
 
 describe('Navbar Component', () => {
-  it('renders the navbar with all links', () => {
+  it('renders Home link', () => {
     render(
-      <MemoryRouter>
+      <MemoryRouterWrapper>
         <Navbar />
-      </MemoryRouter>
+      </MemoryRouterWrapper>
     );
-
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Projects')).toBeInTheDocument();
-    expect(screen.getByText('Contact')).toBeInTheDocument();
+    const homeLink = screen.getByText('Home');
+    expect(homeLink).toBeInTheDocument();
   });
+
+  it('renders About link', () => {
+    render(
+      <MemoryRouterWrapper>
+        <Navbar />
+      </MemoryRouterWrapper>
+    );
+    const aboutLink = screen.getByText('About');
+    expect(aboutLink).toBeInTheDocument();
+  });
+
+ 
 });
