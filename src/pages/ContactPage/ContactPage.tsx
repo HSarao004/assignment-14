@@ -1,33 +1,54 @@
 import React from 'react';
+import Text from '../../components/Text/Text';
+import MyButton from '../../components/Mybutton/Mybutton';
+import './ContactPage.css';
 
 const ContactPage = () => {
   return (
     <div className="ContactPage">
       <main>
         <section className="contact-form">
-          <h1>Contact Me</h1>
+          <Text as="h1" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey">
+            Contact Me
+          </Text>
           <form>
             <div>
-              <label htmlFor="email">Email:</label>
+              <Text as="label" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey" htmlFor="email">
+                Email:
+              </Text>
               <input type="email" id="email" name="email" required />
             </div>
             <div>
-              <label htmlFor="phone">Phone Number:</label>
+              <Text as="label" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey" htmlFor="phone">
+                Phone Number:
+              </Text>
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div>
-              <label htmlFor="query">Your Questions:</label>
+              <Text as="label" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey" htmlFor="query">
+                Your Questions:
+              </Text>
               <textarea id="query" name="query" required></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <MyButton type="submit">
+              Submit
+            </MyButton>
           </form>
         </section>
         <section className="social-media">
-          <h2>Connect with me</h2>
+          <Text as="h2" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey">
+            Connect with me
+          </Text>
           <ul>
-            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="mailto:your-email@example.com">Gmail</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li>
+              <a href="mailto:your-email@example.com">Gmail</a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
           </ul>
         </section>
       </main>

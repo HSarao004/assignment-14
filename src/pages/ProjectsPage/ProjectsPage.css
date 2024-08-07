@@ -1,0 +1,46 @@
+/* ProjectsPage.css */
+.ProjectsPage {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .projects {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projects h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  .project h2 {
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .projects {
+      padding: 15px;
+    }
+  
+    .project h2 {
+      font-size: 1.2rem;
+    }
+  
+    .project p {
+      font-size: 1rem;
+    }
+  }
+  

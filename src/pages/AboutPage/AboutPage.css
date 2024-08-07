@@ -1,0 +1,59 @@
+.AboutPage {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about h1,
+  .about h2,
+  .about h3 {
+    color: #333;
+  }
+  
+  .about p,
+  .about ul {
+    color: #555;
+  }
+  
+  .about ul {
+    padding-left: 20px;
+  }
+  
+  .about ul li {
+    list-style-type: disc;
+  }
+  
+  .about section {
+    margin-bottom: 20px;
+  }
+  
+  .about h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .about h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .about h3 {
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+  }
+  
+  .about p {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .about ul li {
+    margin-bottom: 0.5em;
+  }
+  
