@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from '../../components/Img/Img';
 import MyButton from '../../components/Mybutton/Mybutton';
 import Text from '../../components/Text/Text';
 import './HomePage.css';
@@ -11,7 +10,6 @@ const HomePage = () => {
         <Text as="h1" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey">
           Harsimran Singh Sarao
         </Text>
-        <Img src="/images/sam_photo.png" alt="Your Photo" />
         <Text as="p" color="black" visible={true} backgroundColor="transparent" disabledBackgroundColor="grey">
           Full Stack Web Developer
         </Text>
